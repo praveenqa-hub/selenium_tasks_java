@@ -1,22 +1,47 @@
 package misctasks;
 
+import java.time.Duration;
+
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
+import org.openqa.selenium.support.ui.ExpectedConditions;
+import org.openqa.selenium.support.ui.WebDriverWait;
+import org.testng.Assert;
+import org.testng.asserts.SoftAssert;
 
 public class LoginTestOrangeHrm {
-	/*
-	 * 1) Launch browser 2) open url https://opensource-demo.orangehrmlive.com/ 3)
-	 * Provide username - Admin 4) Provide password - admin123 5) Click on Login
-	 * button 6) Verify the title of dashboard page Exp title : OrangeHRM 7) close
-	 * browser
-	 * 
-	 */
+	
 	WebDriver driver = AppMain.getDriver();
 	String url = "https://opensource-demo.orangehrmlive.com/";
+
+	public static String getUserName(WebDriver driver) {
+		String user = driver.findElement(By.xpath("//div[@class='orangehrm-login-error']/descendant::p[1]")).getText();
+		String[] user_array = user.split(": ");
+		return user_array[1];
+	}
+
+	public static String getPassword(WebDriver driver) {
+		String pass = driver.findElement(By.xpath("//div[@class='orangehrm-login-error']//p[2]")).getText();
+		String[] pass_array = pass.split(": ");
+		return pass_array[1];
+	}
+
 	public void loginTestHrm(WebDriver driver) {
 		driver.get("https://opensource-demo.orangehrmlive.com/");
-		driver.findElement(By.name("username")).sendKeys("Hai");
-		;
+
+		String title = driver.getTitle();
+		SoftAssert sa = new SoftAssert();
+		WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(10));
+		sa.assertEquals(title, "OrangeHRM");
+
+		driver.findElement(By.name("username")).sendKeys(getUserName(driver));
+		driver.findElement(By.name("password")).sendKeys(getPassword(driver));
+		driver.findElement(By.xpath("//button[normalize-space(text()='Login')]")).click();
+		wait.until(ExpectedConditions.elementToBeClickable(driver.findElement(By.xpath("//*[text()='Dashboard']"))));
+		String dash_text = driver.findElement(By.xpath("//*[text()='Dashboard']")).getText();
+		Assert.assertEquals(dash_text, "Dashboard");
+		driver.findElement(By.cssSelector("p.oxd-userdropdown-name")).click();
+		driver.findElement(By.linkText("Logout")).click();
 	}
 
 }
