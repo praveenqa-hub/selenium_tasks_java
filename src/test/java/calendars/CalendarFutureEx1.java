@@ -12,7 +12,7 @@ public class CalendarFutureEx1 {
 	public void calendarFuture(WebDriver driver) throws InterruptedException {
 		driver.get(url);
 		WebElement roundTrip = driver.findElement(By.id("ctl00_mainContent_rbtnl_Trip_1"));
-		 roundTrip.click();
+		roundTrip.click();
 		departureDate(driver);
 		returnDate(driver);
 
@@ -32,7 +32,7 @@ public class CalendarFutureEx1 {
 			for (int j = 0; j < i; j++) {
 				driver.findElement(By.xpath("//span[text()='Next']")).click();
 			}
-			driver.findElement(By.xpath(String.format("//a[text()=%s]",depart_date.toString()))).click();
+			driver.findElement(By.xpath(String.format("//a[text()=%s]", depart_date.toString()))).click();
 		}
 	}
 
@@ -49,7 +49,7 @@ public class CalendarFutureEx1 {
 			for (int j = 0; j < i; j++) {
 				driver.findElement(By.xpath("//span[text()='Next']")).click();
 			}
-			driver.findElement(By.xpath(String.format("//a[text()=%s]",return_date.toString()))).click();
+			driver.findElement(By.xpath(String.format("//a[text()=%s]", return_date.toString()))).click();
 		}
 	}
 
