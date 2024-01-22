@@ -4,20 +4,24 @@ import org.openqa.selenium.WebDriver;
 
 import criotasks.LaunchBrowser;
 
-public class AppMain extends LaunchBrowser{
+public class AppMain extends LaunchBrowser {
 
-	AppMain(){
+	AppMain() {
 		super();
 	}
+
 	public static void main(String[] args) throws InterruptedException {
-		
+
 		AppMain calend = new AppMain();
-		
+
 		WebDriver driver = AppMain.getDriver();
-		CalendarCurrentEx1 ca1 = new CalendarCurrentEx1();
-		ca1.pickCurrentDate(driver);
-		
-		
+//		CalendarCurrentEx1 ca1 = new CalendarCurrentEx1();
+//		ca1.pickCurrentDate(driver);
+
+		CalendarFutureEx1 cf1 = new CalendarFutureEx1();
+		cf1.calendarFuture(driver);
+
+		Thread.sleep(3000);
 		calend.endTest();
 	}
 
