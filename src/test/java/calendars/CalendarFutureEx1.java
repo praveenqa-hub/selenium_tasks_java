@@ -9,7 +9,7 @@ public class CalendarFutureEx1 {
 	WebDriver driver = AppMain.getDriver();
 	String url = "https://rahulshettyacademy.com/dropdownsPractise/";
 
-	public void calendarFuture(WebDriver driver) throws InterruptedException {
+	public void calendarFuture(WebDriver driver) {
 		driver.get(url);
 		WebElement roundTrip = driver.findElement(By.id("ctl00_mainContent_rbtnl_Trip_1"));
 		roundTrip.click();
@@ -18,7 +18,7 @@ public class CalendarFutureEx1 {
 
 	}
 
-	public void departureDate(WebDriver driver) throws InterruptedException {
+	public void departureDate(WebDriver driver) {
 		driver.findElement(By.id("ctl00_mainContent_view_date1")).click();
 		String current_month = driver.findElement(By.className("ui-datepicker-month")).getText();
 		int act_month = month(current_month);

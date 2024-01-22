@@ -13,7 +13,7 @@ public class StaticDropEx1 {
 	WebDriver driver = AppMain.getDriver();
 	String url = "https://rahulshettyacademy.com/dropdownsPractise/";
 
-	public void handleStaticDropDown(WebDriver driver) throws InterruptedException {
+	public void handleStaticDropDown(WebDriver driver) {
 
 		driver.get(url);
 		SoftAssert sa = new SoftAssert();
@@ -21,15 +21,13 @@ public class StaticDropEx1 {
 
 		Select sel = new Select(currency_drp);
 		sel.selectByValue("USD");
-		Thread.sleep(2000); // for visibility of changing
 		sel.selectByIndex(2);
-	
+
 		sa.assertEquals(sel.isMultiple(), false);
-		
+
 		WebElement static_Firstsel = sel.getFirstSelectedOption();
 		System.out.println("First selected : " + static_Firstsel.getText());
 		sel.selectByVisibleText("INR");
-		Thread.sleep(2000);
 
 		List<WebElement> opt = sel.getOptions();
 		System.out.println("Available options: ");
