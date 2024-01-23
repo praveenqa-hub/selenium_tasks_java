@@ -13,7 +13,7 @@ public class AutoSuggestDropDownEx1 {
 	String url = "https://rahulshettyacademy.com/dropdownsPractise/";
 	String country = "India";
 
-	public void autoDrop(WebDriver driver) throws InterruptedException {
+	public void autoDrop(WebDriver driver) {
 		driver.get(url);
 
 		WebElement autodrop = driver.findElement(By.id("autosuggest"));

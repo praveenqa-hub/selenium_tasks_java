@@ -22,10 +22,13 @@ public class AppMain extends LaunchBrowser {
 //		DynamicDropEx1 dd = new DynamicDropEx1();
 //		dd.DynamicDropDown(driver);
 		
-		AutoSuggestDropDownEx1 auto = new AutoSuggestDropDownEx1();
-		auto.autoDrop(driver);
+//		AutoSuggestDropDownEx1 auto = new AutoSuggestDropDownEx1();
+//		auto.autoDrop(driver);
 		
+		DropDownEx2 dx2 = new DropDownEx2();
+		dx2.dropDown(driver);
 		
+		Thread.sleep(3000);
 		drp.endTest();
 	}
 
