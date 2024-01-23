@@ -1,6 +1,5 @@
 package dropdowns;
 
-import java.util.Arrays;
 import java.util.List;
 
 import org.openqa.selenium.By;
@@ -12,39 +11,39 @@ public class DropDownEx2 {
 
 	WebDriver driver = AppMain.getDriver();
 	String url = "https://phppot.com/demo/jquery-dependent-dropdown-list-countries-and-states/";
-	
-	public void dropDown(WebDriver driver){
+
+	public void dropDown() {
 		driver.get(url);
-		
-		//not using select class
+
+		// not using select class
 		driver.findElement(By.id("country-list")).click();
 		List<WebElement> countryopt = driver.findElements(By.cssSelector("select#country-list option"));
-		for(WebElement e:countryopt) {
-			if(e.getText().equalsIgnoreCase("usa")) {
+		for (WebElement e : countryopt) {
+			if (e.getText().equalsIgnoreCase("usa")) {
 				e.click();
 				break;
 			}
 		}
-		
+
 		driver.findElement(By.id("state-list")).click();
 		List<WebElement> stateopt = driver.findElements(By.cssSelector("select#state-list option"));
-		for(WebElement e:stateopt) {
-			if(e.getText().equalsIgnoreCase("new york")) {
+		for (WebElement e : stateopt) {
+			if (e.getText().equalsIgnoreCase("new york")) {
 				e.click();
 				break;
 			}
 		}
-		
-		//using select
+
+		// using select
 		WebElement country = driver.findElement(By.id("country-list"));
 		Select sel = new Select(country);
 		sel.selectByValue("5");
-		System.out.println("No of country options : "+sel.getOptions().size());
-		
+		System.out.println("No of country options : " + sel.getOptions().size());
+
 		WebElement state = driver.findElement(By.id("state-list"));
 		Select selstate = new Select(state);
 		selstate.selectByVisibleText("Iowa");
-		System.out.println("No of state options : "+selstate.getOptions().size());
-		
+		System.out.println("No of state options : " + selstate.getOptions().size());
+
 	}
 }

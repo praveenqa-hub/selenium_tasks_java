@@ -13,7 +13,7 @@ public class StaticDropEx1 {
 	WebDriver driver = AppMain.getDriver();
 	String url = "https://rahulshettyacademy.com/dropdownsPractise/";
 
-	public void handleStaticDropDown(WebDriver driver) {
+	public void handleStaticDropDown() {
 
 		driver.get(url);
 		SoftAssert sa = new SoftAssert();

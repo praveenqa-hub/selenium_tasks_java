@@ -12,7 +12,7 @@ public class AlertEx2 {
 	WebDriver driver = AppMain.getDriver();
 	String url = "https://the-internet.herokuapp.com/javascript_alerts";
 
-	public void alertTypes(WebDriver driver) {
+	public void alertTypes() {
 		driver.get(url);
 		WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(10));
 		driver.findElement(By.xpath("//button[text()='Click for JS Alert']")).click();

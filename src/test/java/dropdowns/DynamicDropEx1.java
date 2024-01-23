@@ -22,7 +22,7 @@ public class DynamicDropEx1 {
 				.click();
 	}
 
-	public void dynamicDropDown(WebDriver driver) {
+	public void dynamicDropDown() {
 		SoftAssert sa = new SoftAssert();
 		driver.get(url);
 		Integer adult = 5;

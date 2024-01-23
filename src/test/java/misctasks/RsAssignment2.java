@@ -15,12 +15,12 @@ public class RsAssignment2 {
 	WebDriver driver = AppMain.getDriver();
 	String url = "https://rahulshettyacademy.com/angularpractice/";
 
-	public void protractorPage(WebDriver driver) {
+	public void protractorPage() {
 		driver.get(url);
 		driver.findElement(By.name("name")).sendKeys("Dhoni");
 		driver.findElement(By.cssSelector("input[name='email']")).sendKeys("Dhoni@gmail.com");
 		driver.findElement(By.id("exampleInputPassword1")).sendKeys("passTest@1");
-		
+
 		WebElement checkbox = driver.findElement(By.id("exampleCheck1"));
 		Assert.assertTrue(checkbox.isEnabled());
 		checkbox.click();

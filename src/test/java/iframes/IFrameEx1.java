@@ -8,7 +8,7 @@ public class IFrameEx1 {
 	WebDriver driver = AppMain.getDriver();
 	String url = "https://ui.vision/demo/webtest/frames/";
 
-	void uiVisionFrames(WebDriver driver) {
+	void uiVisionFrames() {
 		driver.get(url);
 
 		// frame 3 contains inner frame

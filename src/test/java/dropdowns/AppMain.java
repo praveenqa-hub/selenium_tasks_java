@@ -1,7 +1,5 @@
 package dropdowns;
 
-import org.openqa.selenium.WebDriver;
-
 import criotasks.LaunchBrowser;
 
 public class AppMain extends LaunchBrowser {
@@ -14,20 +12,18 @@ public class AppMain extends LaunchBrowser {
 		// TODO Auto-generated method stub
 		AppMain drp = new AppMain();
 
-		WebDriver driver = AppMain.getDriver();
-
 //		StaticDropEx1 sd1 = new StaticDropEx1();
-//		sd1.handleStaticDropDown(driver);
-		
+//		sd1.handleStaticDropDown();
+
 //		DynamicDropEx1 dd = new DynamicDropEx1();
-//		dd.DynamicDropDown(driver);
-		
+//		dd.DynamicDropDown();
+
 //		AutoSuggestDropDownEx1 auto = new AutoSuggestDropDownEx1();
-//		auto.autoDrop(driver);
-		
+//		auto.autoDrop();
+
 		DropDownEx2 dx2 = new DropDownEx2();
-		dx2.dropDown(driver);
-		
+		dx2.dropDown();
+
 		Thread.sleep(3000);
 		drp.endTest();
 	}

@@ -1,7 +1,5 @@
 package misctasks;
 
-import org.openqa.selenium.WebDriver;
-
 public class AppMain extends criotasks.LaunchBrowser {
 
 	AppMain() {
@@ -10,22 +8,21 @@ public class AppMain extends criotasks.LaunchBrowser {
 	}
 
 	public static void main(String[] args) {
-		
+
 		AppMain ap = new AppMain();
-		WebDriver driver = AppMain.getDriver();
-		
-		// Uncomment to run 
+
+		// Uncomment to run
 //		 LoginTestOrangeHrm hrm = new LoginTestOrangeHrm();
-//		 hrm.loginTestHrm(driver);
+//		 hrm.loginTestHrm();
 
 		// LoginTestRS lrs = new LoginTestRS();
-		// lrs.loginTestRS(driver);
+		// lrs.loginTestRS();
 
 //		 RsAssignment1 rs1 = new RsAssignment1();
-//		 rs1.checkBox(driver);
-		
+//		 rs1.checkBox();
+
 		RsAssignment2 rs2 = new RsAssignment2();
-		 rs2.protractorPage(driver);
+		rs2.protractorPage();
 		// driver quits
 		ap.endTest();
 	}

@@ -9,7 +9,7 @@ public class AlertEx1 {
 	WebDriver driver = AppMain.getDriver();
 	String url = "https://rahulshettyacademy.com/AutomationPractice/";
 
-	void alertDemo(WebDriver driver) {
+	void alertDemo() {
 		driver.get(url);
 		WebElement field = driver.findElement(By.id("name"));
 		field.sendKeys("Dhoni");

@@ -13,13 +13,13 @@ import org.testng.asserts.SoftAssert;
 public class LoginTestRS {
 	WebDriver driver = AppMain.getDriver();
 
-	public static String getPassword(WebDriver driver) {
+	public String getPassword() {
 		String msg = driver.findElement(By.cssSelector("p.infoMsg")).getText();
 		String[] msg_array = msg.split("'");
 		return msg_array[1];
 	}
 
-	public void loginTestRS(WebDriver driver) {
+	public void loginTestRS() {
 
 		String url = "https://rahulshettyacademy.com/locatorspractice/";
 		String title = "Rahul Shetty Academy - Login page";
@@ -57,7 +57,7 @@ public class LoginTestRS {
 		driver.findElement(By.xpath("//div[contains(@class,'sign-up-container')]//input[3]")).sendKeys("9494949494");
 		driver.findElement(By.xpath("//button[text()='Reset Login']")).click();
 		wait.until(ExpectedConditions.visibilityOf(driver.findElement(By.cssSelector("p.infoMsg"))));
-		String password = getPassword(driver);
+		String password = getPassword();
 		driver.findElement(By.xpath("//button[text()='Go to Login']")).click();
 		username_field.sendKeys(email);
 		password_field.clear();

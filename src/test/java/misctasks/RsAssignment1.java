@@ -10,7 +10,7 @@ public class RsAssignment1 {
 	WebDriver driver = AppMain.getDriver();
 	String url = "https://rahulshettyacademy.com/AutomationPractice/";
 
-	public void checkBox(WebDriver driver) {
+	public void checkBox() {
 		driver.get(url);
 		WebElement checkBox1 = driver.findElement(By.id("checkBoxOption1"));
 		Assert.assertFalse(checkBox1.isSelected());
@@ -19,6 +19,6 @@ public class RsAssignment1 {
 		checkBox1.click();
 		Assert.assertFalse(checkBox1.isSelected());
 		int count = driver.findElements(By.xpath("//input[@type='checkbox']")).size();
-		System.out.println("Count of check boxes : "+count);
+		System.out.println("Count of check boxes : " + count);
 	}
 }

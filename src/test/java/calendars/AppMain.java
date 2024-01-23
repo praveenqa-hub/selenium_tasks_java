@@ -1,7 +1,5 @@
 package calendars;
 
-import org.openqa.selenium.WebDriver;
-
 import criotasks.LaunchBrowser;
 
 public class AppMain extends LaunchBrowser {
@@ -14,12 +12,8 @@ public class AppMain extends LaunchBrowser {
 
 		AppMain calend = new AppMain();
 
-		WebDriver driver = AppMain.getDriver();
-	CalendarCurrentEx1 ca1 = new CalendarCurrentEx1();
-		ca1.pickCurrentDate(driver);
-
-		
-
+		CalendarCurrentEx1 ca1 = new CalendarCurrentEx1();
+		ca1.pickCurrentDate();
 
 		Thread.sleep(3000);
 		calend.endTest();
