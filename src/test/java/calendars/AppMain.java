@@ -15,14 +15,11 @@ public class AppMain extends LaunchBrowser {
 		AppMain calend = new AppMain();
 
 		WebDriver driver = AppMain.getDriver();
-//		CalendarCurrentEx1 ca1 = new CalendarCurrentEx1();
-//		ca1.pickCurrentDate(driver);
+	CalendarCurrentEx1 ca1 = new CalendarCurrentEx1();
+		ca1.pickCurrentDate(driver);
 
-//		CalendarFutureEx1 cf1 = new CalendarFutureEx1();
-//		cf1.calendarFuture(driver);
 		
-		FlightBookingRS flight = new FlightBookingRS();
-		flight.endToEndTest(driver);
+
 
 		Thread.sleep(3000);
 		calend.endTest();
