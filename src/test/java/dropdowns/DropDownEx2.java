@@ -1,5 +1,6 @@
 package dropdowns;
 
+import java.util.Arrays;
 import java.util.List;
 
 import org.openqa.selenium.By;
@@ -38,10 +39,12 @@ public class DropDownEx2 {
 		WebElement country = driver.findElement(By.id("country-list"));
 		Select sel = new Select(country);
 		sel.selectByValue("5");
+		System.out.println("No of country options : "+sel.getOptions().size());
 		
 		WebElement state = driver.findElement(By.id("state-list"));
 		Select selstate = new Select(state);
 		selstate.selectByVisibleText("Iowa");
+		System.out.println("No of state options : "+selstate.getOptions().size());
 		
 	}
 }
