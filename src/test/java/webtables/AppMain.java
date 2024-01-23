@@ -12,8 +12,11 @@ public class AppMain extends LaunchBrowser {
 
 		AppMain tables = new AppMain();
 
-		StaticTableEx1 table1 = new StaticTableEx1();
-		table1.staticTable();
+//		StaticTableEx1 table1 = new StaticTableEx1();
+//		table1.staticTable();
+		
+		PaginationTableEx1 ptab = new PaginationTableEx1();
+		ptab.paginationTable();
 
 		tables.endTest();
 	}

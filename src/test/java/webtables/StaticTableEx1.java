@@ -30,10 +30,10 @@ public class StaticTableEx1 {
 		for (WebElement w : headers) {
 			System.out.print(w.getText() + " ");
 		}
-		// table[@name='BookTable']//tr[2]//td[1]
-		// //table[@name='BookTable']//tr["+r+"]//td["+c+"]"
+		
 		for (int i = 2; i <= 7; i++) {
 			for (int j = 1; j <= 4; j++) {
+				
 				String value = (driver.findElement(By.xpath("//table[@name='BookTable']//tr[" + i + "]//td[" + j + "]"))
 						.getText());
 				System.out.print(value + "\t");
