@@ -12,9 +12,13 @@ public class AppMain extends LaunchBrowser {
 
 		AppMain winhand = new AppMain();
 
-		OrangeHrmDemo orng = new OrangeHrmDemo();
-		orng.winHand();
+//		OrangeHrmDemo orng = new OrangeHrmDemo();
+//		orng.winHand();
 
+		MultipleWindowEX1 mw = new MultipleWindowEX1();
+		mw.multiWindowApproach1();
+		mw.multiWindowApproach2();
+		
 		Thread.sleep(2000);
 		winhand.endTest();
 	}
