@@ -12,14 +12,20 @@ public class AppMain extends LaunchBrowser {
 
 		AppMain calend = new AppMain();
 
-//		CalendarCurrentEx1 ca1 = new CalendarCurrentEx1();
-//		ca1.pickCurrentDate();
-	
+		FlightBookingRS flight = new FlightBookingRS();
+		flight.endToEndTest();
+
 //		CalendarDatePickEx1 datepick = new CalendarDatePickEx1();
 //		datepick.datePicker();
-		
-		TicketDOB dob = new TicketDOB();
-		dob.calendarDob();
+
+//		CalendarCurrentEx1 ca1 = new CalendarCurrentEx1();
+//		ca1.pickCurrentDate();
+
+//		TicketDOB dob = new TicketDOB();
+//		dob.calendarDob();
+
+//		CalendarFutureEx1 cf = new CalendarFutureEx1();
+//		cf.calendarFuture();
 
 		Thread.sleep(3000);
 		calend.endTest();
