@@ -9,7 +9,7 @@ public class AppMain extends LaunchBrowser {
 	}
 
 	public static void main(String[] args) throws InterruptedException {
-		// TODO Auto-generated method stub
+		// Uncomment to execute
 		AppMain drp = new AppMain();
 
 //		StaticDropEx1 sd1 = new StaticDropEx1();
@@ -21,8 +21,12 @@ public class AppMain extends LaunchBrowser {
 //		AutoSuggestDropDownEx1 auto = new AutoSuggestDropDownEx1();
 //		auto.autoDrop();
 
-		DropDownEx2 dx2 = new DropDownEx2();
-		dx2.dropDown();
+//		DropDownEx2 dx2 = new DropDownEx2();
+//		dx2.dropDown();
+		
+		DropDownHiddenOptions hid = new DropDownHiddenOptions();
+		hid.hiddenOptions();
+		
 
 		Thread.sleep(3000);
 		drp.endTest();
