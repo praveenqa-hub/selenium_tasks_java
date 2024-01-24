@@ -10,7 +10,7 @@ public class IFrameEx1 {
 
 	void uiVisionFrames() {
 		driver.get(url);
-
+		// only 3 ways id/name, webelement, index
 		// frame 3 contains inner frame
 		driver.switchTo().frame(driver.findElement(By.xpath("//frame[@src='frame_3.html']")));
 		driver.findElement(By.name("mytext3")).sendKeys("Yuvi entered Frame 3");

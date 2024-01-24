@@ -12,8 +12,11 @@ public class AppMain extends LaunchBrowser {
 
 		AppMain calend = new AppMain();
 
-		CalendarCurrentEx1 ca1 = new CalendarCurrentEx1();
-		ca1.pickCurrentDate();
+//		CalendarCurrentEx1 ca1 = new CalendarCurrentEx1();
+//		ca1.pickCurrentDate();
+		
+		CalendarDatePickEx1 datepick = new CalendarDatePickEx1();
+		datepick.datePicker();
 
 		Thread.sleep(3000);
 		calend.endTest();
