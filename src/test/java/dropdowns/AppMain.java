@@ -24,7 +24,7 @@ public class AppMain extends LaunchBrowser {
 //		DropDownEx2 dx2 = new DropDownEx2();
 //		dx2.dropDown();
 		
-		DropDownHiddenOptions hid = new DropDownHiddenOptions();
+		HiddenOptionsDropDown hid = new HiddenOptionsDropDown();
 		hid.hiddenOptions();
 		
 
