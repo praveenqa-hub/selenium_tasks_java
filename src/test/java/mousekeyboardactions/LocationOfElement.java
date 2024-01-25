@@ -1,4 +1,4 @@
-package mousekeyactions;
+package mousekeyboardactions;
 
 import org.openqa.selenium.By;
 import org.openqa.selenium.Point;

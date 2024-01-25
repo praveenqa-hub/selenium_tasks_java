@@ -1,4 +1,4 @@
-package mousekeyactions;
+package mousekeyboardactions;
 
 import java.time.Duration;
 

@@ -1,6 +1,4 @@
-package mousekeyactions;
-
-import java.time.Duration;
+package mousekeyboardactions;
 
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
