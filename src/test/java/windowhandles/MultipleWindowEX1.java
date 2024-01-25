@@ -1,4 +1,4 @@
-package window_handles;
+package windowhandles;
 
 import java.util.ArrayList;
 import java.util.List;

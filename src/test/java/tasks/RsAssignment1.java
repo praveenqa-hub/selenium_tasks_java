@@ -1,4 +1,4 @@
-package misctasks;
+package tasks;
 
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;

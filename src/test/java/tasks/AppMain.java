@@ -1,6 +1,8 @@
-package misctasks;
+package tasks;
 
-public class AppMain extends criotasks.LaunchBrowser {
+import criotasks.LaunchBrowser;
+
+public class AppMain extends LaunchBrowser {
 
 	AppMain() {
 		super();
@@ -22,11 +24,15 @@ public class AppMain extends criotasks.LaunchBrowser {
 //		RsAssignment2 rs2 = new RsAssignment2();
 //		rs2.protractorPage();
 
-//		FlightBookingRS fly = new FlightBookingRS();
-//		fly.endToEndTest();
+		FlightBookingRS fly = new FlightBookingRS();
+		fly.endToEndTest();
 
 //		BlazeTicket blz = new BlazeTicket();
 //		blz.blazeFly();
+
+//		DummyTicket dt = new DummyTicket();
+//		dt.dummyTicket();
+		
 
 		// driver quits
 		Thread.sleep(3000);

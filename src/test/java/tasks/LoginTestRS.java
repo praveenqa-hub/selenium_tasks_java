@@ -1,4 +1,4 @@
-package misctasks;
+package tasks;
 
 import java.time.Duration;
 

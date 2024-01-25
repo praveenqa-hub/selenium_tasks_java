@@ -1,4 +1,4 @@
-package window_handles;
+package windowhandles;
 
 import criotasks.LaunchBrowser;
 
