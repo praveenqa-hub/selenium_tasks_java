@@ -21,10 +21,8 @@ public class TakesScreenshotEx2 {
 		// ChromeDriver driver = new ChromeDriver();
 		driver.manage().window().maximize();
 		driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(20));
-		driver.get("https://www.amazon.in/");
+		driver.get("https://www.limeroad.com/");
 		capture(driver);
-		
-
 	}
 	
 	public static void capture(WebDriver driver) throws IOException {
