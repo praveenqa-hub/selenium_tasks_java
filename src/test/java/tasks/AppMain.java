@@ -1,5 +1,7 @@
 package tasks;
 
+import java.io.IOException;
+
 import criotasks.LaunchBrowser;
 
 public class AppMain extends LaunchBrowser {
@@ -8,13 +10,16 @@ public class AppMain extends LaunchBrowser {
 		super();
 	}
 
-	public static void main(String[] args) throws InterruptedException {
+	public static void main(String[] args) throws InterruptedException, IOException {
 
 		AppMain ap = new AppMain();
 		// Uncomment to run
 
-		FlightBookingRS fly = new FlightBookingRS();
-		fly.endToEndTest();
+//		FlightBookingRS fly = new FlightBookingRS();
+//		fly.endToEndTest();
+		
+		BrokenLinks broken = new BrokenLinks();
+		broken.broke();
 
 //		 LoginTestOrangeHrm hrm = new LoginTestOrangeHrm();
 //		 hrm.loginTestHrm();
