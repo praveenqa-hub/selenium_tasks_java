@@ -12,10 +12,10 @@ public class AppMain extends LaunchBrowser {
 
 		AppMain ap = new AppMain();
 		// Uncomment to run
-		
+
 		FlightBookingRS fly = new FlightBookingRS();
 		fly.endToEndTest();
-		
+
 //		 LoginTestOrangeHrm hrm = new LoginTestOrangeHrm();
 //		 hrm.loginTestHrm();
 
@@ -33,7 +33,6 @@ public class AppMain extends LaunchBrowser {
 
 //		DummyTicket dt = new DummyTicket();
 //		dt.dummyTicket();
-		
 
 		// driver quits
 		Thread.sleep(3000);
