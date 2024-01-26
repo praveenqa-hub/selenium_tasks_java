@@ -1,6 +1,7 @@
 package calendars;
 
 import org.openqa.selenium.By;
+import org.openqa.selenium.JavascriptExecutor;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.ui.Select;
@@ -12,7 +13,12 @@ public class TicketDOB {
 	
 	void calendarDob(){
 		driver.get(url);
-		driver.findElement(By.id("dob")).click();
+		
+		WebElement calendar = driver.findElement(By.id("dob"));
+		JavascriptExecutor jse = (JavascriptExecutor)driver;
+		jse.executeScript("arguments[0].scrollIntoView();", calendar);
+		calendar.click();
+		
 		WebElement month = driver.findElement(By.className("ui-datepicker-month"));
 		Select selectMonth = new Select(month);
 		selectMonth.selectByVisibleText("Apr");
