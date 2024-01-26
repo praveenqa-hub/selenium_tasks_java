@@ -12,20 +12,21 @@ public class AppMain extends LaunchBrowser {
 
 		AppMain ap = new AppMain();
 		// Uncomment to run
+		
+		FlightBookingRS fly = new FlightBookingRS();
+		fly.endToEndTest();
+		
 //		 LoginTestOrangeHrm hrm = new LoginTestOrangeHrm();
 //		 hrm.loginTestHrm();
 
-		// LoginTestRS lrs = new LoginTestRS();
-		// lrs.loginTestRS();
+//		 LoginTestRS lrs = new LoginTestRS();
+//		 lrs.loginTestRS();
 
 //		 RsAssignment1 rs1 = new RsAssignment1();
 //		 rs1.checkBox();
 
 //		RsAssignment2 rs2 = new RsAssignment2();
 //		rs2.protractorPage();
-
-		FlightBookingRS fly = new FlightBookingRS();
-		fly.endToEndTest();
 
 //		BlazeTicket blz = new BlazeTicket();
 //		blz.blazeFly();
