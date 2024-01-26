@@ -1,6 +1,7 @@
 package criotasks;
 
 import org.openqa.selenium.By;
+import org.openqa.selenium.JavascriptExecutor;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.ui.Select;
@@ -27,8 +28,10 @@ public class IMDBRatings {
 
 		// Click on sortby arrow button 
 		WebElement arrow = driver.findElement(By.xpath("//*[text()='Sort by']/parent::span/following-sibling::button"));
-		arrow.click();
-		Thread.sleep(3000);
+		JavascriptExecutor jse = (JavascriptExecutor) driver;
+		jse.executeScript("arguments[0].scrollIntoView();", arrow);
+		jse.executeScript("arguments[0].click();", arrow);
+		Thread.sleep(2000);
 
 		// Print the oldest movie on the list Using Locator "XPath"
 		System.out.println("Oldest movie on the list: "
@@ -36,7 +39,7 @@ public class IMDBRatings {
 
 		// Click on arrow button Using Locator "CSS Selector" div.lister-activated span
 		arrow.click();
-		Thread.sleep(3000);
+		Thread.sleep(2000);
 		
 		// Print the most recent movie on the list Using Locator "XPath"
 		System.out.println("The most recent movie on the list -"
@@ -45,7 +48,7 @@ public class IMDBRatings {
 		// Select "Number of Ratings" from the dropdown, using visible text Number of
 		// Ratings
 		sel.selectByValue("USER_RATING_COUNT");
-		Thread.sleep(3000);
+		Thread.sleep(2000);
 
 		// Print the movie with most user ratings Using Locator
 		System.out.println("The movie with most user ratings: "

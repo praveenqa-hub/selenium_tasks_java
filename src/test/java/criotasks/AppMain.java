@@ -18,7 +18,7 @@ public class AppMain {
 		// lin.textPost();
 
 		GoogleNameLinks name = new GoogleNameLinks();
-		 name.nameLinks();
+		// name.nameLinks();
 
 		BmsImageUrl iurl = new BmsImageUrl();
 		// iurl.imgUrl();
@@ -27,7 +27,7 @@ public class AppMain {
 		// nf.nFrame();
 
 		IMDBRatings imdbr = new IMDBRatings();
-		// imdbr.imdb();
+		 imdbr.imdb();
 
 		WindowHandle wh = new WindowHandle();
 		// wh.winHandle();
