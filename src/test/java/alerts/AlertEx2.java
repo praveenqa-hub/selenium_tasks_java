@@ -25,7 +25,6 @@ public class AlertEx2 {
 		System.out.println(driver.switchTo().alert().getText());
 		driver.switchTo().alert().dismiss();
 
-		
 		driver.findElement(By.xpath("//button[text()='Click for JS Prompt']")).click();
 				wait.until(ExpectedConditions.alertIsPresent());
 				System.out.println(driver.switchTo().alert().getText());
